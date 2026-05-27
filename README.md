@@ -74,7 +74,7 @@ Adding backend functionality where needed
 
 📌 How to Run This Project
 Clone this repository:
-git clone https://github.com/your-username/javascript-mini-projects.git
+git clone https://github.com/VanshikaPatil13/javascript-mini-projects.git
 Open any project folder
 Open index.html in your browser
 Explore and interact with the project
