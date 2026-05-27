@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="form-container">
+
+        <form id="form" action="" autocomplete="on">
+            <label for="name">NAME:</label>
+            <input class="input" type="text" id="name" placeholder="Write your name.." autocomplete="name">
+            <label for="dob">DOB:</label>
+            <input class="input" type="date" id="dob" autocomplete="bday">
+            <label for="email">EMAIL ID:</label>
+            <input class="input" type="email" id="email" placeholder="abc123@gmail.com" autocomplete="email">
+            <label for="role">OCCUPATION:</label>
+            <input class="input" type="text" id="role" placeholder="Write your job role..."
+                autocomplete="organization-title">
+            <label for="file">PROFILE PIC:</label>
+            <div class="img-cnt">
+                <span>No file chosen</span>
+                <input class="input" type="file" id="file">
+                <div class="upload">UPLOAD</div>
+            </div>
+            <small>Only JPG or JPEG files are allowed.</small>
+             <input type="submit" class="submit" value="submit">
+        </form>
+        <div class="card-container">
+            <!--  <div class="main">
+                <div class="profile-cont">
+                    <img class="profile-photo"
+                    src="https://plus.unsplash.com/premium_photo-1766436243398-12e575815f94?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Profile Picture">
+                </div>
+                <div class="about">
+                    <h4>NAME</h4>
+                    <P>AGE: 24</P>
+                    <P>EMAIL: KMSJKN@gmail.com</P>
+                    <P class="occupation">JOB PROFILE :
+                        <span class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore neque necessitatibus
+                            labore, blanditiis, consequatur quas est culpa sit nam voluptatum quod officiis expedita ut,
+                            modi
+                            qui aliquam perspiciatis!
+                        </span>
+                    </P>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

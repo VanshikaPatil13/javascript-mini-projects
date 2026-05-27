@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #0f172a;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-cont {
+    width: 350px;
+    padding: 25px;
+    border: 2px solid rgba(105, 102, 102, 0.507);
+    border-radius: 10px;
+    animation: anime 0.5s;
+}
+
+@keyframes anime {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+.input-user,
+.input-password {
+    width: 300px;
+    margin: 30px 0 20px 0;
+    position: relative;
+}
+
+/* inputs */
+#username,
+#password {
+    width: 100%;
+    height: 40px;
+    padding: 7px;
+    outline: none;
+    color: #fff;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 2px solid #38bdf8;
+}
+#username::placeholder,
+#password::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #0f172a inset !important;
+    -webkit-text-fill-color: #fff !important;
+}
+label {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    padding: 0 5px;
+    color: #fff;
+    opacity: 0.6;
+    pointer-events: none;
+    transition: 0.3s;
+    background-color: #0f172a;
+}
+
+#username:focus + label,
+#username:valid + label {
+    top: -12px;
+    left: 12px;
+    font-size: 20px;
+    opacity: 1;
+    color: #38bdf8;
+}
+
+#password:focus + label,
+#password:valid + label {
+    top: -8px;
+    left: 12px;
+    font-size: 20px;
+    opacity: 1;
+    color: #38bdf8;
+}
+
+/* error message */
+.input-password small {
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    color: red;
+}
+
+
+/* button fix (center properly) */
+#login-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #3cc4ff;
+}
+
+#login-btn:hover {
+    transform: scale(1.03);
+    background-color: #19b2f4;
+}
+
+/* message */
+#para {
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+/* hide default checkbox */
+#checkbox {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #38bdf8;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    transition: 0.2s;
+}
+
+/* hover effect */
+#checkbox:hover {
+    border-color: #da9929;
+}
+
+/* checked state */
+#checkbox:checked {
+    background-color: #38bdf8;
+    border-color: #38bdf8;
+}
+
+/* checkmark */
+#checkbox:checked::after {
+    content: "✔";
+    position: absolute;
+    top: -2px;
+    left: 3px;
+    font-size: 14px;
+    color: #0f172a;
+}
+
+/* text alignment */
+span {
+    margin-left: 8px;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 14px;
+}

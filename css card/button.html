@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            margin: auto;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .simple {
+             border-radius: 50px;
+             background-color: white;
+             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+             cursor: pointer;
+             border: 0;
+             letter-spacing: 1.7px;
+             font-size: 16px;
+             margin: 40px;
+             padding: 13px 25px ;
+             box-shadow: 0 4px 8px rgba(0, 0 , 1.5) ;
+             transition: all 0.5s ease;
+        }
+        .simple:hover {
+            font-size: 17px;
+            letter-spacing: 3px;
+            color: white;
+            background-color: #7351e2;
+            box-shadow: 0px 7px 29px 0px rgb(93 24 220);
+        }
+        .simple:active {
+            transform: translateY(10px);
+            transition: 100ms;
+        }
+
+.send {
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: inherit;
+    color: white;
+    background-color: royalblue;
+    transition: all 0.5s ease;
+}
+
+.send:hover {
+    letter-spacing: 1.5px;
+   transform: scale(1.1) ;
+    font-size: 20px;
+}
+.send:active {
+    transform: translateY(5px);
+}
+
+.toggle {
+   width: 60px;
+   height: 30px;
+   background: #ccc;
+   border-radius: 30px;
+   position: relative;
+   cursor: pointer;
+}
+.toggle::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+ 
+input {
+    display:none;
+}
+input:checked + .toggle {
+    background: #4c53ff;
+}
+input:checked + .toggle::before {
+    left: 32px;
+}
+
+    </style>
+</head>
+<body>
+    <button class="simple">BUTTON</button>
+    <button class="send">Send</button>
+    <input type="checkbox" id="switch">
+    <label for="switch" class="toggle" ></label>
+</body>
+</html>

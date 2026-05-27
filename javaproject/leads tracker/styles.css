@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+min-width: 400px;
+    background: #90895d;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #f5df60;
+}
+
+.input-field {
+    width: 100%;
+    padding: 14px 10px;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+.input-field:hover {
+    transform: scale(1.01);
+}
+.input-field:active {
+    transform: scale(1.01);
+}
+
+.input-field::placeholder {
+    letter-spacing: 4px;
+}
+
+#input-btn ,#tab-btn ,#del-btn  {
+    width: 20%;
+    height: 40px;
+    margin: 5px;
+    color: #fff;
+    letter-spacing: 1.5px;
+    text-shadow: 0 8px 20px rgb(244, 244, 244);
+    font-size: 10px;
+    font-weight: bold;
+    background: #142a93;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+button:hover {
+    transform: scale(1.02);
+    letter-spacing: 3px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+button:active{
+    transform: translateY(2px);
+}
+#tab-btn{
+    width: 23%;
+    font-weight: bolder;
+    background-color: #cadeed;
+    color: #142a93;
+   transition: all 0.3s ease;
+}
+#tab-btn:hover{
+    transform: scale(1.02);
+}
+#del-btn {
+    letter-spacing: 0;
+    width: 20%;
+    background: #d90c0c;
+}
+#ul-el {
+    width: 100%;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#ul-el li {
+    width: 100%;
+    padding: 5px 15px ;
+    margin-bottom: 7px;
+    border-radius: 10px;
+    background: #e6e696;
+    transition: all 0.3s ease;
+}
+#ul-el li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(242, 229, 134, 0.859);
+}
+
+ .list-cont {
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.list-cont a {
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: bold;
+    opacity: 0.9;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+}
+.list-cont a:hover {
+    opacity: 1;
+}
+.delete-Btn {
+    width: 10%;
+    padding: 7px 5px;
+    color: #f32424;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background: #83f090;
+}
+.delete-Btn:hover{
+    background: #50e762;
+        color: #d90c0c;
+
+}

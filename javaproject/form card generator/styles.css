@@ -1,0 +1,218 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Background */
+body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    display: flex;
+    padding: 25px;
+}
+
+/* container*/
+.form-container {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    gap: 30px;
+}
+
+/* Form Card */
+form {
+    background: #ffffff;
+    padding: 30px;
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.6s ease-in-out;
+    transition: all 0.3s ease;
+}
+
+/*Form hover*/
+form:hover {
+    transform: scale(1.01);
+}
+
+/* Labels */
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Inputs */
+form input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 2px solid #41393929;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Input Focus */
+form input:focus {
+    border-color: #c33764;
+    box-shadow: 0 0 6px rgba(195, 55, 100, 0.4);
+}
+
+ .img-cnt:hover{
+    border-color: #c33764;
+    box-shadow: 0 0 6px rgba(195, 55, 100, 0.4);
+}
+
+/* age input*/
+form input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.4);
+    cursor: pointer;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    color: #fff;
+    border: none;
+    margin-bottom: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+form input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Small animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+}
+
+.main {
+    width: 350px;
+    height: 250px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #7e82aa;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.5s ease-in;
+    transition: all 0.3s ease;
+}
+
+.main:hover {
+    background-color: #989dd6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+/*main animation*/
+
+.about {
+    margin-top: 7px;
+}
+
+.profile-cont {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.occupation {
+    margin-top: 3.5px;
+    color: #fcfcfc;
+    font-size: 16px;
+}
+
+.para {
+    margin-top: 4px;
+    font-size: large;
+    color: black;
+}
+
+h4 {
+    margin-bottom: 2px;
+}
+
+.img-cnt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    border: 2px solid #41393929;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+span{
+    padding: 7px 9px;
+    overflow: hidden;
+    font-size: 13px;
+}
+.upload {
+    width: 70px;
+    height: 40px;
+    background-color: #c33764;
+    padding: 7px 8px;
+    border-radius: 2px ;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+    color: white;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+
+#file {
+    border: none;
+    margin-top: 5px;
+    display: none;
+}
+
+.submit {
+    margin-top: 30px;
+}
+
+small{
+    font-size: 10px;
+    color: #1d2671;
+}

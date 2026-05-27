@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #d1dbdc, #66a6ff);
+}
+
+/* Glass container */
+.calculator{
+    width: 320px;
+    padding: 20px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow: 
+        0 8px 30px rgba(0,0,0,0.2),
+        inset 0 0 10px rgba(255,255,255,0.1);
+}
+
+/* Display */
+#display{
+    width: 100%;
+    height: 60px;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* Buttons grid */
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Buttons */
+button{
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    backdrop-filter: blur(5px);
+
+    box-shadow: 
+        0 4px 10px rgba(0,0,0,0.2),
+        inset 0 0 5px rgba(255,255,255,0.1);
+
+    transition: all 0.2s ease;
+}
+
+/* Hover effect */
+button:hover{
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+}
+
+/* Click effect */
+button:active{
+    transform: scale(0.95);
+}
+
+/* Special buttons */
+button:nth-child(1){
+   color: black;
+    background: rgba(232, 34, 34, 0.692); /* C button */
+}
+
+button:nth-child(16){
+    color: black;
+    background: rgba(0, 255, 149, 0.632); /* = button */
+}
+
+button:nth-child(12){
+ color: black;
+}

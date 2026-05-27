@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #000;
+    --nav-color:#101010;
+    --primary-text-color: #f4f4f4;
+    --bg-button-color: #1f1e1e;
+    --bg-board-color: #1c1c1c;
+    --bg-task-color: #303030;
+    --delete-color:#b01c1c;
+
+    /* padding */
+    --nav-padding: 15px 30px;
+    --section-padding: 15px 30px;
+    --padding-s: 5px;
+    --padding-m: 10px;
+    --padding-l: 15px;
+    --padding-xl: 20px;
+    --padding-xxl: 30px;
+
+    /* margin */
+    --margin-s: 5px;
+
+    /* border radius */
+    --border-radius-s: 5px;
+    --border-radius-m: 10px;
+    --border-radius-l: 15px;
+    --border-radius-xl: 20px;
+    --border-radius-xxl: 30px;
+}
+
+/* FIX: full height layout */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-text-color);
+    font-family: Arial, sans-serif;
+}
+
+/* FIX: make main fill screen */
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAV */
+nav {
+    padding: var(--nav-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-color);
+    position: sticky;
+    top: 0;
+}
+
+nav button {
+    background-color: var(--bg-button-color);
+    border: none;
+    color: var(--primary-text-color);
+    padding: var(--padding-m);
+    border-radius: var(--border-radius-m);
+    cursor: pointer;
+}
+
+/* BOARD */
+section.board {
+    padding: var(--section-padding);
+    display: flex;
+    flex-grow: 1;
+    gap: var(--padding-xxl);
+}
+
+/* COLUMNS */
+.task-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    cursor: grab ;
+    padding: var(--padding-m);
+    background-color: var(--bg-board-color);
+    border-radius: var(--border-radius-m);
+    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.task-column.hover-over{
+    border: 2px dashed var(--primary-text-color);
+    scale: 1.03;
+}
+
+/* COLUMN HEADER */
+.task-column .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-m);
+    border-bottom: 1px solid #444;
+    font-weight: bold;
+}
+
+section .task-column .task {
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: var(--border-radius-m);
+    padding: var(--padding-m);
+    margin-top: var(--margin-s);
+    background-color: var(--bg-task-color);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-s) var(--padding-m);
+}
+section .task-column .task button{
+    align-self: flex-end;
+    cursor: pointer;
+    padding: var(--padding-s) var(--padding-m);
+    border-radius: var(--border-radius-s);
+    outline: none;
+    border: none;
+    color: var(--primary-text-color);
+    background-color: var(--delete-color);
+}
+.modal{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal .bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(94, 91, 91, 0.123);
+    backdrop-filter: blur(5px);
+}
+
+.modal .center{
+    background-color: #151515;
+    padding: var(--padding-xxl);
+    border-radius: var(--border-radius-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-m);
+    z-index: 10;
+}
+
+.modal .center input, .modal .center textarea, .modal .center select{
+    background-color: var(--bg-task-color);
+    border: none;
+    outline:none;
+    color: var(--primary-text-color);
+    padding: var(--padding-m);
+    border-radius: var(--border-radius-s);
+}
+.modal .center button{
+    width: fit-content;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 5px 50px  ;
+    border-radius: var(--border-radius-s);
+    box-shadow: inset 0 8px 30px rgba(255, 255, 255, 0.354);
+    color: var(--primary-text-color);
+    background-color: var(--bg-button-color);
+    padding: var(--padding-s) var(--padding-m);
+}
