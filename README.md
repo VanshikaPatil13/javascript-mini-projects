@@ -76,8 +76,10 @@ Adding backend functionality where needed
 Clone this repository:
 git clone https://github.com/VanshikaPatil13/javascript-mini-projects.git
 Open any project folder
+
 Open index.html in your browser
 Explore and interact with the project
+
 👨‍💻 About Me
 
 I am an aspiring MERN Stack Developer, currently learning:
